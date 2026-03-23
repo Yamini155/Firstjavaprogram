@@ -19,7 +19,7 @@ public class LoopStatementsTest {
 //		Question 3
 		int sum=0;
 		for(int i=1;i<=10;i++) {
-			sum = sum + i;
+			sum += i;
 			
 		}
 		System.out.println("total is :" + sum);
@@ -34,6 +34,19 @@ public class LoopStatementsTest {
 		}
 		System.out.println("Rocket Launched");
 		
+		  
+		
+//		Question 5
+		int balance=1000;
+		int month=1;
+		while(balance<5000) {
+			balance+=500;
+			System.out.println("Month :" + month +"=" + balance);
+			
+			month++;
+			}
+		
+		
 
 //				Question 6
 		int j = 1;
@@ -43,6 +56,25 @@ public class LoopStatementsTest {
 		    }
 		    j++; 
 		}
+		
+//		do while loop
+//		Question 7
+		int round=1;
+		do {
+		System.out.println("Practicing... round " + round);
+		round++;
+		}while(round<=5);
+		
+//		Question 8
+		int count=1;
+		do {
+			System.out.println("--vending machine--");
+			System.out.println("1. Water  - ₹10");
+			System.out.println("2. Juice  - ₹30");
+			System.out.println("3. Soda  - ₹20");
+		
+			count++;
+		}while(count<=3);
 		
 
 	}

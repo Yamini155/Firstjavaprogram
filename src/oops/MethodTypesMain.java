@@ -20,7 +20,8 @@ public class MethodTypesMain {
 		
 //		with parameters with return
 		MethodTypesTest m4 = new MethodTypesTest();
-		int maximum=m4.maxNumber(20,50);
+		int a=500; int b=100;
+		int maximum=m4.maxNumber(a,b);
 		System.out.println(maximum);
 
 	}

@@ -23,18 +23,13 @@ int fixedNumber() {
  }
  
 // with parameters with return
- int maxNumber(int x,int y) {
-	 x=100;
-	 y=50;
-	 if(x > y) {
-		 return x;
-	 }else {
-		 return y;
-	 }
+ int maxNumber(int a, int b) {
+	    return (a > b) ? a : b;
+	}
 	
 
 
- }
+ 
  
 
 }

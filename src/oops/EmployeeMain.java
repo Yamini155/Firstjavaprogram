@@ -9,6 +9,7 @@ public class EmployeeMain {
 		Emp1.display();
 		Emp2.display();
 		Emp3.display();
+		
 
 	}
 

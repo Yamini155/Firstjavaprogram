@@ -24,7 +24,7 @@ public class EmployeeDetails {
 		  if(salary>=0 && salary<=100) {
 			  this.Salary = salary;
 		  }else  {
-			  System.out.println("Print an error message");
+			  System.out.println("error in salary");
 		  }
 		  
 	  }

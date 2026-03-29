@@ -6,12 +6,12 @@ public class EmployeeDetailsMain {
 		EmployeeDetails obj1= new EmployeeDetails();
 		obj1.setName("Yamini");
 		obj1.setEmployeeId(1);
-		obj1.setSalary(50);
+		obj1.setSalary(150);
 		
 		System.out.println(obj1.getName());
 		System.out.println(obj1.getEmployeeId());
 		System.out.println(obj1.getSalary());
-
+		
 	}
 
 }

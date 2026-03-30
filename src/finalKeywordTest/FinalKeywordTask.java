@@ -7,9 +7,9 @@ class Vehicle{
 }
 
 class Car extends Vehicle{
-	void startEngine() {
-		System.out.println("Engine is starting");
-	}
+//	void startEngine() {
+//		System.out.println("Engine is starting");
+//	}
 	
 }
 
@@ -18,7 +18,7 @@ public class FinalKeywordTask {
 	public static void main(String[] args) {
 		Car obj1= new Car();
 		obj1.startEngine();
-		obj1.Max_speed=150;
+//		obj1.Max_speed=150;
 		
 		
 		

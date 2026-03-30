@@ -4,7 +4,7 @@ public class StudentStaticClass {
 	static int totalStudents=0;
 	StudentStaticClass(){
 		
-		totalStudents+=10;
+		totalStudents++;
 	}
 	
 	static void display() {

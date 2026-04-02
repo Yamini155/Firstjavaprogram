@@ -2,6 +2,7 @@ package bankaccountProgram;
 class BankAccount {
     private double balance;
     
+    
     public double getBalance() {
 		return balance;
 	}
@@ -24,10 +25,12 @@ class BankAccount {
 }
 
 class SavingsAccount extends BankAccount{
-	double balance=1000;
+	
 	 void withdraw(int amount) {
-	        if (amount >= balance) {
-	            balance += amount;
+		 double balance=getBalance();
+	        if (amount <= balance) {
+	            balance -= amount;
+	            setBalance(balance);
 	            System.out.println("Savings Account is: " + balance);
 	        }else {
 	            System.out.println("Insufficient balance");
@@ -37,10 +40,12 @@ class SavingsAccount extends BankAccount{
 }
 
 class CurrentAcount extends BankAccount{
-	double balance=100000;
+	
 	 void withdraw(int amount) {
+		 double balance=getBalance();
 	        if (amount <= balance) {
 	            balance -= amount;
+	            setBalance(balance);
 	            System.out.println("Current Account is: " + balance);
 	        } else {
 	            System.out.println("Insufficient balance");
@@ -56,10 +61,19 @@ public class BankAccountDemoMain {
 	public static void main(String[] args) {
 		
 		SavingsAccount obj1= new SavingsAccount();
-		obj1.withdraw(10000);
+		obj1.deposit(10000);
+		obj1.withdraw(1000);
+		System.out.println("savings balance :" + obj1.getBalance());
+		
+		
 		
 		CurrentAcount obj2= new CurrentAcount();
-		obj2.withdraw(10000);
+		obj2.deposit(1000);
+		obj2.withdraw(100);
+		System.out.println("current balance :" +obj2. getBalance());
+		
+		
+		
 		
 
 	}

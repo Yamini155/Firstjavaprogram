@@ -42,6 +42,9 @@ public class Arrays1D {
 		
 		int highest=marks[0];
 		for(int i=0;i<marks.length;i++) {
+			if(marks[i]>highest) {
+				highest=marks[i];
+			}
 			
 			
 		}
@@ -50,6 +53,9 @@ public class Arrays1D {
 //		lowest salary
 		int lowest=marks[0];
 		for (int i=0;i<marks.length;i++) {
+			if(marks[i]<lowest) {
+				lowest=marks[i];
+			}
 			
 		}
 		System.out.println("Lowest salary is:" + lowest);

@@ -2,7 +2,7 @@ package assignment9;
 
 public class Assignment9Class {
 
-	private static char[] j;
+	
 
 	public static void main(String[] args) {
 		// Question 1

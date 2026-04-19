@@ -2,9 +2,9 @@ package assignment10;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class ArrayListClass {
-
 	public static void main(String[] args) {
 		ArrayList<Integer> marks = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
@@ -74,15 +74,37 @@ public class ArrayListClass {
      
 //     Question 7
      
+     Collections.sort(marks);
+     System.out.println("marks in Ascending order :" );
+     for(int i=0;i<marks.size();i++) {
+    	 System.out.println(marks.get(i));
+    	 
+     }
      
+     int rank=1;
+     for(int i=marks.size()-1;i>=0;i--) {
+    	System.out.println("Rank" +" "+ rank+ ":"+ " "+  marks.get(i));
+    	rank=rank+1;
+    	 
+     }
      
+//     Question 8
+   int maxMarks=  Collections.max(marks);
+     System.out.println("max mark is :" + maxMarks);
      
-         
+     int minMarks= Collections.min(marks);
+     System.out.println("min mark is :" + minMarks);
+     
          sc.close();
+         
+         
+         
      
 		
 		
 		}
+
+
 		
 	
 		

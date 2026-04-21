@@ -9,15 +9,15 @@ import java.util.Scanner;
 class ProjectEmployee{
 	List <String> eNames= new ArrayList<>();
 	static LinkedHashSet <String> dNames = new LinkedHashSet<>();
-	LinkedHashMap<String, Double> employeeSalaries = new LinkedHashMap<>();
+	LinkedHashMap<String, Double> employeeSalariesMap = new LinkedHashMap<>();
 
 	
 	
 	
-	public void employeeDetails(String name, String dept, double salary) {
+	public void employeeDetails(String name, String dept, double sal) {
 		eNames.add(name);
 		dNames.add(dept);
-		employeeSalaries.put(name, salary);
+		employeeSalariesMap.put(name, sal);
 			
 	}
 	
@@ -39,8 +39,8 @@ class ProjectEmployee{
 	
 	public void displaySalaries() {
 		System.out.println("-----salaries-----");
-		for(String name:employeeSalaries.keySet()) {
-			System.out.println(name + "=>"+ employeeSalaries.get(name));
+		for(String name:employeeSalariesMap.keySet()) {
+			System.out.println(name + "=>"+ employeeSalariesMap.get(name));
 			
 		}
 	}
@@ -48,7 +48,7 @@ class ProjectEmployee{
 	
 	public void searchEmployee(String name) {
 		if(eNames.contains(name)) {
-			System.out.println("employee details :" +employeeSalaries.get(name));
+			System.out.println("employee details :" +employeeSalariesMap.get(name));
 			
 		}else {
 			System.out.println("employee name not found");
@@ -58,14 +58,21 @@ class ProjectEmployee{
 	
 	public void removeEmployee(String name) {
 	
-		if(eNames.contains(name) && employeeSalaries.containsKey(name) ) {
+		if(eNames.contains(name) ) {
 		 eNames.remove(name);
-		 employeeSalaries.remove(name);
 		 System.out.println("Removed Employee :" + name);
 	
 		}else {
 			System.out.println("Employee not found");
 		}
+		
+		if(employeeSalariesMap.containsKey(name) ) {
+			 employeeSalariesMap.remove(name);
+			 System.out.println("Removed Employee :" + name);
+		
+			}else {
+				System.out.println("Employee not found");
+			}
 	}
 	
 	public void total() {
@@ -91,7 +98,6 @@ public class MiniProject2Class {
 		obj.displayEmployees();
 		ProjectEmployee.displayDepartments();
 		obj.displaySalaries();
-		obj.removeEmployee("Yamini");
 		obj.total();
 		
 		
@@ -100,6 +106,7 @@ public class MiniProject2Class {
 		System.out.println("Enter Employee name:");
 		String name= sc.nextLine();
 		obj.searchEmployee(name);
+		obj.removeEmployee(name);
 		sc.close();
 	
 
